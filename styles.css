@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    display: flex; /* Делаем тело документа flex-контейнером */
+    flex-direction: column; /* Размещаем элементы вертикально */
+    min-height: 100vh;  /* Минимальная высота тела документа равна высоте экрана */
+}
+
+header {
+    background-color: #eee;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* position: sticky;
+    top: 0; */
+    position: fixed;                   /* Фиксируем заголовок сверху */
+    top: 0;                           /* Выравниваем по верху */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+h1 {
+    text-align: center;
+    /* font-family: Montserrat;  */
+    font-family: 'Times New Roman', Times, serif;
+    color: #2323dd;
+}
+   
+.gallery-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 1rem;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    /* Добавим */
+    /* aspect-ratio: 1 / 1; Пропорции квадратные по умолчанию */
+    display: block; /* Становится блочным элементом */
+}
+
+figure:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;           /* Ширина равна родительскому контейнеру */
+    /* Заменяем */
+    /* height: auto;          Высота рассчитывается автоматически */
+    /* object-fit: cover;     Изображение занимает всю площадь контейнера, обрезая края при необходимости */
+        /* height: 100%;          Высота равняется высоте контейнера */
+    height: auto; /* Автонастроенная высота */
+    object-fit: contain;   /* Сохраняет пропорции изображения и центрируется */
+    object-position: center; /* Центровка изображения */
+    border-radius: inherit; /* Радиус границы наследуется от родителя */
+}
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.5rem; /* Расстояние между изображением и подписью */
+    display: block; /* Становится блочным элементом */
+}
+
+footer {
+    /* padding: 1rem;
+    background-color: #eee;
+    text-align: center; */
+    position: fixed;       /* Зафиксировать позицию */
+    bottom: 0;             /* Расположить снизу экрана */
+    left: 0;               /* Прикрепить к левому краю */
+    right: 0;              /* Растянуть на всю ширину экрана */
+    padding: 1rem;         /* Внутренние отступы */
+    background-color: #eee; /* Цвет фона */
+    text-align: center;    /* Центрирование текста */
+    z-index: 1000;         /* Уровень наложения поверх основного контента */
+}
+
+main {
+    /* padding-bottom: 50px; Нижний отступ равен высоте футера */
+    flex-grow: 1;                  /* Главный контент займет всё доступное пространство */
+    padding: 1rem;
+    margin-top: calc(100px + env(safe-area-inset-top)); /* Смещаем вниз, чтобы освободить место для header */
+    margin-bottom: calc(200px + env(safe-area-inset-bottom)); /* Оставляем место для footer */
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#comments-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#comments-list li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
