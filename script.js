@@ -87,9 +87,6 @@ function loadGallery() {
         'image37.jpg',
         'image38.jpg',
         'image39.jpg',
-        'image40.jpg',
-        'image41.jpg',
-        'image42.jpg',
         // Добавь сюда остальные изображения
         // Продолжай список файлов здесь
     ];
