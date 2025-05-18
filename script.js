@@ -76,6 +76,31 @@ function createFigureElement(filename) {
 // 3. Инициализация галереи
 loadGallery();
 
+// --- Новое ---
+
+// Получаем элементы
+const modalBackdrop = document.querySelector('.modal-backdrop');
+const modalImgContainer = document.querySelector('.modal-img-container');
+const modalImg = modalImgContainer.querySelector('img');
+
+// Открывает модальное окно
+function openModal(event) {
+    const targetImgSrc = event.target.src; // Получаем источник маленького изображения
+    modalImg.src = targetImgSrc; // Присваиваем источник большому изображению
+    modalBackdrop.classList.add('show');
+    modalImgContainer.classList.add('show');
+}
+
+// Закрывает модальное окно
+function closeModal() {
+    modalBackdrop.classList.remove('show');
+    modalImgContainer.classList.remove('show');
+}
+
+// Обработчик клика на затемнении или крестике
+modalBackdrop.addEventListener('click', closeModal);
+modalImg.addEventListener('click', closeModal);
+
 
 // 3. Настройка отправки комментариев
 function setupForm() {
@@ -95,3 +120,5 @@ function setupForm() {
         }
     });
 }
+
+
