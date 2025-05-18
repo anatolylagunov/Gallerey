@@ -29,8 +29,8 @@ header {
 h1 {
     text-align: center;
     /* font-family: Montserrat;  */
-/*     font-family: 'Times New Roman', Times, serif; */
-     font-family: 'kunstlre script';
+     font-family: 'Times New Roman', Times, serif;
+/*      font-family: 'kunstlre script'; */
     
     color: #2323dd;
 }
@@ -71,7 +71,8 @@ img {
 
 figcaption {
     text-align: center;
-    font-weight: bold;
+/*     font-weight: bold; */
+    font-style: italic;
     margin-top: 0.5rem; /* Расстояние между изображением и подписью */
     display: block; /* Становится блочным элементом */
 }
