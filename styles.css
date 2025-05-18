@@ -59,10 +59,6 @@ figure:hover {
 
 img {
     width: 100%;           /* Ширина равна родительскому контейнеру */
-    /* Заменяем */
-    /* height: auto;          Высота рассчитывается автоматически */
-    /* object-fit: cover;     Изображение занимает всю площадь контейнера, обрезая края при необходимости */
-        /* height: 100%;          Высота равняется высоте контейнера */
     height: auto; /* Автонастроенная высота */
     object-fit: contain;   /* Сохраняет пропорции изображения и центрируется */
     object-position: center; /* Центровка изображения */
@@ -71,16 +67,12 @@ img {
 
 figcaption {
     text-align: center;
-/*     font-weight: bold; */
     font-style: italic;
     margin-top: 0.5rem; /* Расстояние между изображением и подписью */
     display: block; /* Становится блочным элементом */
 }
 
 footer {
-    /* padding: 1rem;
-    background-color: #eee;
-    text-align: center; */
     position: fixed;       /* Зафиксировать позицию */
     bottom: 0;             /* Расположить снизу экрана */
     left: 0;               /* Прикрепить к левому краю */
