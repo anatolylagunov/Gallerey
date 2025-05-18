@@ -107,6 +107,10 @@ function createFigureElement(filename) {
     img.alt = filename.split('.')[0];
     figcaption.textContent = filename.split('.')[0];
 
+    
+    // Добавляем обработчик клика для открытия модального окна
+    img.addEventListener('click', openModal);
+
     figure.appendChild(img);
     figure.appendChild(figcaption);
 
